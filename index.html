@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ry-Maniana | Performance Artist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #FF69B4, #9370DB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(45deg, #FF69B4, #9370DB);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <nav class="fixed w-full bg-black bg-opacity-90 z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold gradient-text">Ry-Maniana</h1>
+            <div class="space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="min-h-screen flex items-center justify-center relative">
+        <img src="/api/placeholder/1920/1080" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-50">
+        <div class="relative z-10 text-center">
+            <h1 class="text-6xl font-bold mb-4 gradient-text">Ry-Maniana</h1>
+            <p class="text-xl">Performance Artist | Entertainer | Creative Force</p>
+        </div>
+    </header>
+
+    <section id="gallery" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 gradient-text text-center">Gallery</h2>
+            <div class="image-grid">
+                <img src="/api/placeholder/400/600" alt="Performance 1" class="w-full h-96 object-cover rounded-lg shadow-lg hover:opacity-80 transition-opacity">
+                <img src="/api/placeholder/400/600" alt="Performance 2" class="w-full h-96 object-cover rounded-lg shadow-lg hover:opacity-80 transition-opacity">
+                <img src="/api/placeholder/400/600" alt="Performance 3" class="w-full h-96 object-cover rounded-lg shadow-lg hover:opacity-80 transition-opacity">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-6 bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 gradient-text text-center">About Me</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                A versatile performer with a passion for artistic expression through various mediums. 
+                Specializing in creating unforgettable performances that combine visual artistry with emotional depth.
+            </p>
+            <p class="text-lg leading-relaxed">
+                Each performance is a unique journey, crafted to captivate and inspire audiences 
+                while pushing the boundaries of traditional entertainment.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12 gradient-text">Get in Touch</h2>
+            <p class="text-xl mb-8">For bookings and inquiries</p>
+            <div class="space-x-6">
+                <a href="#" class="inline-block px-8 py-3 rounded-full border-2 border-pink-500 hover:bg-pink-500 transition-colors">
+                    Contact
+                </a>
+                <a href="#" class="inline-block px-8 py-3 rounded-full border-2 border-purple-500 hover:bg-purple-500 transition-colors">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 py-8 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>© 2024 Ry-Maniana. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
